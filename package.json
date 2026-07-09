@@ -1,0 +1,30 @@
+{
+  "name": "ts6to7",
+  "version": "0.1.0",
+  "description": "Codemod that migrates a TypeScript 6 project to TypeScript 7 (tsgo): rewrites tsconfig.json options removed in TS7 and flags changes that need manual review.",
+  "type": "module",
+  "bin": {
+    "ts6to7": "bin/ts6to7.js"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "typescript",
+    "codemod",
+    "migration",
+    "tsgo",
+    "typescript-7"
+  ],
+  "dependencies": {
+    "jsonc-parser": "^3.3.1"
+  },
+  "license": "MIT"
+}
