@@ -1,5 +1,8 @@
 # ts6to7
 
+[![CI](https://github.com/zi-gae/ts6to7/actions/workflows/ci.yml/badge.svg)](https://github.com/zi-gae/ts6to7/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/ts6to7)](https://www.npmjs.com/package/ts6to7)
+
 Codemod that migrates a **TypeScript 6** project to **TypeScript 7 (tsgo)**.
 No install needed — try it in 10 seconds:
 
@@ -7,7 +10,7 @@ No install needed — try it in 10 seconds:
 npx ts6to7 --dry
 ```
 
-![ts6to7 rewriting a legacy tsconfig for TypeScript 7](docs/demo.gif)
+![ts6to7 rewriting a legacy tsconfig for TypeScript 7](https://raw.githubusercontent.com/zi-gae/ts6to7/main/docs/demo.gif)
 
 TypeScript 7 is the native (Go) rewrite of the compiler. It removes every option
 that TypeScript 6 marked as deprecated and flips some defaults. This tool
