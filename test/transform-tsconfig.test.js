@@ -141,3 +141,76 @@ test('file without compilerOptions is untouched', () => {
   assert.equal(text, input);
   assert.equal(changes.length, 0);
 });
+
+test('extending config does not get strict pinned (base may set it)', () => {
+  const input = `{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": { "outDir": "dist" }
+}`;
+  const { text, changes, warnings } = transformTsconfig(input);
+  assert.equal(co(text).strict, undefined);
+  assert.ok(!changes.some((c) => c.includes('strict')));
+  assert.ok(warnings.some((w) => w.includes('extends')));
+});
+
+test('extending config with explicit strict gets no strict warning', () => {
+  const { warnings } = transformTsconfig(`{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": { "strict": true, "types": [] }
+}`);
+  assert.ok(!warnings.some((w) => w.includes('strict')));
+});
+
+test('uppercase "ES5" target is also raised', () => {
+  const { text } = transformTsconfig(`{
+  "compilerOptions": { "target": "ES5", "strict": true }
+}`);
+  assert.equal(co(text).target, 'ES2015');
+});
+
+test('preserveValueImports: true -> verbatimModuleSyntax', () => {
+  const { text } = transformTsconfig(`{
+  "compilerOptions": { "preserveValueImports": true, "strict": true }
+}`);
+  const options = co(text);
+  assert.equal(options.preserveValueImports, undefined);
+  assert.equal(options.verbatimModuleSyntax, true);
+});
+
+test('module umd + moduleResolution node -> ESNext + Bundler', () => {
+  const { text } = transformTsconfig(`{
+  "compilerOptions": { "module": "umd", "moduleResolution": "node", "strict": true }
+}`);
+  assert.equal(co(text).module, 'ESNext');
+  assert.equal(co(text).moduleResolution, 'Bundler');
+});
+
+test('moduleResolution node without module -> NodeNext pair', () => {
+  const { text } = transformTsconfig(`{
+  "compilerOptions": { "moduleResolution": "node", "strict": true }
+}`);
+  assert.equal(co(text).module, 'NodeNext');
+  assert.equal(co(text).moduleResolution, 'NodeNext');
+});
+
+test('CRLF line endings are preserved', () => {
+  const input = '{\r\n  "compilerOptions": {\r\n    "target": "es5",\r\n    "strict": true\r\n  }\r\n}';
+  const { text } = transformTsconfig(input);
+  assert.equal(co(text).target, 'ES2015');
+  assert.ok(!/[^\r]\n/.test(text), 'no bare LF was introduced');
+});
+
+test('baseUrl "." folds paths entries as ./-relative', () => {
+  const { text } = transformTsconfig(`{
+  "compilerOptions": { "baseUrl": ".", "paths": { "@app/*": ["app/*"] }, "strict": true }
+}`);
+  assert.deepEqual(co(text).paths['@app/*'], ['./app/*']);
+});
+
+test('non-JSON input is returned unchanged', () => {
+  const input = 'not json at all';
+  const { text, changes, warnings } = transformTsconfig(input);
+  assert.equal(text, input);
+  assert.equal(changes.length, 0);
+  assert.equal(warnings.length, 0);
+});

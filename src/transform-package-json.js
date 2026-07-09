@@ -8,8 +8,9 @@ const API_DEPENDENT = ['ts-patch', 'ttypescript', 'ts-node', 'ts-loader', 'ts-je
 const DEP_FIELDS = ['dependencies', 'devDependencies'];
 
 function majorOf(range) {
-  const m = String(range).match(/(\d+)\./);
-  return m ? Number(m[1]) : null;
+  // First integer in the range: handles "^6.2.0", "~6.0", ">=6", "6", "workspace:^6".
+  const m = String(range).match(/\d+/);
+  return m ? Number(m[0]) : null;
 }
 
 /**
@@ -22,6 +23,7 @@ export function transformPackageJson(text) {
   let result = text;
 
   const json = parse(text) ?? {};
+  const warnedTools = new Set();
 
   for (const field of DEP_FIELDS) {
     const deps = json[field];
@@ -36,12 +38,25 @@ export function transformPackageJson(text) {
     }
 
     for (const name of API_DEPENDENT) {
-      if (deps[name]) {
+      if (deps[name] && !warnedTools.has(name)) {
+        warnedTools.add(name);
         warnings.push(
           `"${name}" uses the TypeScript compiler API, which tsgo does not expose in 7.0 ` +
             '(a new API ships with 7.1). Check that your version supports TS7 or find an alternative.',
         );
       }
+    }
+  }
+
+  // Peer ranges are a compatibility statement — widen manually, don't auto-bump.
+  const peerTs = json.peerDependencies?.typescript;
+  if (typeof peerTs === 'string') {
+    const major = majorOf(peerTs);
+    if (major !== null && major < 7) {
+      warnings.push(
+        `peerDependencies.typescript ("${peerTs}") does not allow 7.x — widen the range ` +
+          'manually (e.g. "^6.0.0 || ^7.0.0") so consumers on TS7 can install this package.',
+      );
     }
   }
 

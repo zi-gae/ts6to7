@@ -33,12 +33,21 @@ What it does:
     - warns about compiler-API tools (ts-node, ts-patch, ts-jest, ...)
 `;
 
+const KNOWN_FLAGS = new Set(['--dry', '-d', '--help', '-h']);
+
 export async function run(argv) {
   const args = [...argv];
   const dry = args.includes('--dry') || args.includes('-d');
   if (args.includes('--help') || args.includes('-h')) {
     console.log(HELP);
     return 0;
+  }
+  // A typo like --dr must not silently run in write mode.
+  const unknown = args.find((a) => a.startsWith('-') && !KNOWN_FLAGS.has(a));
+  if (unknown) {
+    console.error(`Unknown option: ${unknown}\n`);
+    console.log(HELP);
+    return 1;
   }
   const dirArg = args.find((a) => !a.startsWith('-'));
   const root = resolve(process.cwd(), dirArg ?? '.');

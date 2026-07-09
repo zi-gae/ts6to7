@@ -1,0 +1,9 @@
+- generic [ref=f8e3]:
+  - img [ref=f8e5]
+  - generic [ref=f8e7]:
+    - generic [ref=f8e8]: You've been blocked by network security.
+    - generic [ref=f8e10]:
+      - text: If you think you've been blocked by mistake, file a ticket below and we'll look into it.
+      - link "File a ticket" [ref=f8e12] [cursor=pointer]:
+        - /url: https://support.reddithelp.com/hc/en-us/requests/new?ticket_form_id=21879292693140
+        - generic [ref=f8e14]: File a ticket

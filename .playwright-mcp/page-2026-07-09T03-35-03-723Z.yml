@@ -1,0 +1,111 @@
+- generic [ref=f10e1]:
+  - banner [ref=f10e2]:
+    - navigation [ref=f10e3]:
+      - generic [ref=f10e4]:
+        - link "GeekNews" [ref=f10e6] [cursor=pointer]:
+          - /url: /
+        - link "최신글" [ref=f10e7] [cursor=pointer]:
+          - /url: /new
+        - link "예전글" [ref=f10e8] [cursor=pointer]:
+          - /url: /past
+        - link "댓글" [ref=f10e9] [cursor=pointer]:
+          - /url: /comments
+        - link "Ask" [ref=f10e10] [cursor=pointer]:
+          - /url: /ask
+        - link "Show" [ref=f10e11] [cursor=pointer]:
+          - /url: /show
+        - link "GN⁺" [ref=f10e12] [cursor=pointer]:
+          - /url: /plus
+        - link "Weekly" [ref=f10e13] [cursor=pointer]:
+          - /url: /weekly
+        - link "GeekBots" [ref=f10e14] [cursor=pointer]:
+          - /url: /geekbots
+        - link "GeekBadge" [ref=f10e15] [cursor=pointer]:
+          - /url: /geekbadge
+        - link "후원" [ref=f10e16] [cursor=pointer]:
+          - /url: /support
+        - text: "|"
+        - link "글등록" [ref=f10e17] [cursor=pointer]:
+          - /url: /write
+      - generic [ref=f10e18]:
+        - generic [ref=f10e19]:
+          - generic [ref=f10e20]: 검색
+          - searchbox "검색" [ref=f10e21]
+        - link "로그인" [ref=f10e23] [cursor=pointer]:
+          - /url: /login
+  - main [ref=f10e24]:
+    - article [ref=f10e25]:
+      - generic [ref=f10e28]:
+        - generic [ref=f10e29]: ID
+        - textbox "ID" [active] [ref=f10e31]
+        - generic [ref=f10e32]: 암호
+        - textbox "암호" [ref=f10e34]
+        - generic [ref=f10e35]:
+          - checkbox "로그인 유지하기" [checked] [ref=f10e36]
+          - generic [ref=f10e37]: 로그인 유지하기
+        - button "로그인" [ref=f10e39]
+        - generic [ref=f10e40]:
+          - link "회원가입" [ref=f10e41] [cursor=pointer]:
+            - /url: /signup
+          - text: /
+          - link "비밀번호 찾기" [ref=f10e42] [cursor=pointer]:
+            - /url: /forgot
+  - contentinfo [ref=f10e43]:
+    - generic [ref=f10e44]:
+      - generic [ref=f10e45]:
+        - link "처음 오셨나요" [ref=f10e46] [cursor=pointer]:
+          - /url: /start
+        - link "사이트 이용법" [ref=f10e47] [cursor=pointer]:
+          - /url: /guidelines
+        - link "FAQ" [ref=f10e48] [cursor=pointer]:
+          - /url: /faq
+        - link "About" [ref=f10e49] [cursor=pointer]:
+          - /url: /about
+        - link "후원하기" [ref=f10e50] [cursor=pointer]:
+          - /url: /support
+        - link "이용약관" [ref=f10e51] [cursor=pointer]:
+          - /url: /terms
+        - link "개인정보 처리방침" [ref=f10e52] [cursor=pointer]:
+          - /url: /privacy
+        - text: "|"
+        - link "Blog" [ref=f10e53] [cursor=pointer]:
+          - /url: /blog
+        - link "Lists" [ref=f10e54] [cursor=pointer]:
+          - /url: /lists
+        - link "RSS" [ref=f10e55] [cursor=pointer]:
+          - /url: https://news.hada.io/rss/news
+        - text: "|"
+        - link "Bookmarklet" [ref=f10e56] [cursor=pointer]:
+          - /url: /bookmarklet
+      - generic [ref=f10e57]:
+        - link "X (Twitter)" [ref=f10e58] [cursor=pointer]:
+          - /url: https://x.com/GeekNewsHada
+        - link "Facebook" [ref=f10e59] [cursor=pointer]:
+          - /url: https://facebook.com/GeekNewsHada
+        - generic [ref=f10e60]:
+          - text: "|"
+          - link "긱뉴스봇" [ref=f10e61] [cursor=pointer]:
+            - /url: /geekbots
+          - text: ":"
+          - link "Slack" [ref=f10e62] [cursor=pointer]:
+            - /url: /slack
+          - link "잔디" [ref=f10e63] [cursor=pointer]:
+            - /url: /jandibot
+          - link "Discord" [ref=f10e64] [cursor=pointer]:
+            - /url: /discordbot
+          - link "Teams" [ref=f10e65] [cursor=pointer]:
+            - /url: /teamsbot
+          - link "Dooray!" [ref=f10e66] [cursor=pointer]:
+            - /url: /dooraybot
+          - link "Google Chat" [ref=f10e67] [cursor=pointer]:
+            - /url: /googlechatbot
+          - link "Mattermost" [ref=f10e68] [cursor=pointer]:
+            - /url: /mattermostbot
+          - link "Swit" [ref=f10e69] [cursor=pointer]:
+            - /url: /switbot
+    - generic [ref=f10e70]:
+      - 'button "화면 모드: 시스템 설정" [ref=f10e72] [cursor=pointer]':
+        - img [ref=f10e73]
+      - generic [ref=f10e75]:
+        - generic [ref=f10e76]: 검색
+        - searchbox "검색" [ref=f10e77]

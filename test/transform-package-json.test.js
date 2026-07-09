@@ -35,3 +35,43 @@ test('package.json without typescript is untouched', () => {
   assert.equal(changes.length, 0);
   assert.equal(warnings.length, 0);
 });
+
+test('bare-major ranges like ">=6" and "6" are bumped', () => {
+  for (const range of ['>=6', '6']) {
+    const { text, changes } = transformPackageJson(`{
+  "devDependencies": { "typescript": "${range}" }
+}`);
+    assert.equal(parse(text).devDependencies.typescript, '^7.0.0', range);
+    assert.equal(changes.length, 1, range);
+  }
+});
+
+test('unparseable range ("latest") is left alone', () => {
+  const input = `{ "devDependencies": { "typescript": "latest" } }`;
+  const { text, changes } = transformPackageJson(input);
+  assert.equal(text, input);
+  assert.equal(changes.length, 0);
+});
+
+test('typescript peerDependency below 7 gets a warning, not a bump', () => {
+  const input = `{ "peerDependencies": { "typescript": "^6.0.0" } }`;
+  const { text, changes, warnings } = transformPackageJson(input);
+  assert.equal(text, input);
+  assert.equal(changes.length, 0);
+  assert.ok(warnings.some((w) => w.includes('peerDependencies.typescript')));
+});
+
+test('typescript peerDependency already allowing 7 gets no warning', () => {
+  const { warnings } = transformPackageJson(`{
+  "peerDependencies": { "typescript": "^7.0.0" }
+}`);
+  assert.equal(warnings.length, 0);
+});
+
+test('a tool in both dependencies and devDependencies warns once', () => {
+  const { warnings } = transformPackageJson(`{
+  "dependencies": { "ts-node": "^10.9.0" },
+  "devDependencies": { "ts-node": "^10.9.0" }
+}`);
+  assert.equal(warnings.filter((w) => w.includes('"ts-node"')).length, 1);
+});

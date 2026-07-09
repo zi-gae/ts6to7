@@ -1,0 +1,137 @@
+- table [ref=f6e3]:
+  - rowgroup [ref=f6e4]:
+    - row "Hacker Newswelcome | new | threads | past | comments | ask | show | jobs | submit zigae (1) | logout" [ref=f6e5]:
+      - cell "Hacker Newswelcome | new | threads | past | comments | ask | show | jobs | submit zigae (1) | logout" [ref=f6e6]:
+        - table [ref=f6e7]:
+          - rowgroup [ref=f6e8]:
+            - row "Hacker Newswelcome | new | threads | past | comments | ask | show | jobs | submit zigae (1) | logout" [ref=f6e9]:
+              - cell [ref=f6e10]:
+                - link [ref=f6e11] [cursor=pointer]:
+                  - /url: https://news.ycombinator.com
+                  - img [ref=f6e12]
+              - cell "Hacker Newswelcome | new | threads | past | comments | ask | show | jobs | submit" [ref=f6e13]:
+                - generic [ref=f6e14]:
+                  - link "Hacker News" [ref=f6e16] [cursor=pointer]:
+                    - /url: news
+                  - link "welcome" [ref=f6e17] [cursor=pointer]:
+                    - /url: newswelcome.html
+                  - text: "|"
+                  - link "new" [ref=f6e18] [cursor=pointer]:
+                    - /url: newest
+                  - text: "|"
+                  - link "threads" [ref=f6e20] [cursor=pointer]:
+                    - /url: threads?id=zigae
+                  - text: "|"
+                  - link "past" [ref=f6e21] [cursor=pointer]:
+                    - /url: front
+                  - text: "|"
+                  - link "comments" [ref=f6e22] [cursor=pointer]:
+                    - /url: newcomments
+                  - text: "|"
+                  - link "ask" [ref=f6e23] [cursor=pointer]:
+                    - /url: ask
+                  - text: "|"
+                  - link "show" [ref=f6e24] [cursor=pointer]:
+                    - /url: show
+                  - text: "|"
+                  - link "jobs" [ref=f6e25] [cursor=pointer]:
+                    - /url: jobs
+                  - text: "|"
+                  - link "submit" [ref=f6e26] [cursor=pointer]:
+                    - /url: submit
+              - cell "zigae (1) | logout" [ref=f6e27]:
+                - generic [ref=f6e28]:
+                  - link "zigae" [ref=f6e29] [cursor=pointer]:
+                    - /url: user?id=zigae
+                  - text: (1) |
+                  - link "logout" [ref=f6e30] [cursor=pointer]:
+                    - /url: logout?auth=9ec93c72666915c99a742a3e61835bb2cf7b14ef&goto=threads%3Fid%3Dzigae
+    - row [ref=f6e31]
+    - row:
+      - cell
+    - 'row "* 1 point by zigae 0 minutes ago [flagged] | parent | context | edit | delete [–] | on: TypeScript 7 For anyone staring at an older tsconfig wondering how much work the upgrade is: I built a codemod that does the mechanical part. npx ts6to7 --dry It rewrites the options TS7 removed (target: es5, module: umd, baseUrl, importsNotUsedAsValues, ...) in place — comments and formatting preserved — bumps the typescript dep, and prints a checklist of what it can''t safely change (compiler-API tools like ts-node, missing \"types\" arrays, etc). It pins strict: false if you didn''t have it set, so the migration itself is behavior-preserving. https://github.com/zi-gae/ts6to7 — feedback and broken-tsconfig reports welcome." [ref=f6e32]':
+      - 'cell "* 1 point by zigae 0 minutes ago [flagged] | parent | context | edit | delete [–] | on: TypeScript 7 For anyone staring at an older tsconfig wondering how much work the upgrade is: I built a codemod that does the mechanical part. npx ts6to7 --dry It rewrites the options TS7 removed (target: es5, module: umd, baseUrl, importsNotUsedAsValues, ...) in place — comments and formatting preserved — bumps the typescript dep, and prints a checklist of what it can''t safely change (compiler-API tools like ts-node, missing \"types\" arrays, etc). It pins strict: false if you didn''t have it set, so the migration itself is behavior-preserving. https://github.com/zi-gae/ts6to7 — feedback and broken-tsconfig reports welcome." [ref=f6e33]':
+        - table [ref=f6e34]:
+          - rowgroup [ref=f6e35]:
+            - 'row "* 1 point by zigae 0 minutes ago [flagged] | parent | context | edit | delete [–] | on: TypeScript 7 For anyone staring at an older tsconfig wondering how much work the upgrade is: I built a codemod that does the mechanical part. npx ts6to7 --dry It rewrites the options TS7 removed (target: es5, module: umd, baseUrl, importsNotUsedAsValues, ...) in place — comments and formatting preserved — bumps the typescript dep, and prints a checklist of what it can''t safely change (compiler-API tools like ts-node, missing \"types\" arrays, etc). It pins strict: false if you didn''t have it set, so the migration itself is behavior-preserving. https://github.com/zi-gae/ts6to7 — feedback and broken-tsconfig reports welcome." [ref=f6e36]':
+              - cell [ref=f6e37]:
+                - img
+              - cell "*" [ref=f6e38]:
+                - generic [ref=f6e39]:
+                  - text: "*"
+                  - img [ref=f6e40]
+              - 'cell "1 point by zigae 0 minutes ago [flagged] | parent | context | edit | delete [–] | on: TypeScript 7 For anyone staring at an older tsconfig wondering how much work the upgrade is: I built a codemod that does the mechanical part. npx ts6to7 --dry It rewrites the options TS7 removed (target: es5, module: umd, baseUrl, importsNotUsedAsValues, ...) in place — comments and formatting preserved — bumps the typescript dep, and prints a checklist of what it can''t safely change (compiler-API tools like ts-node, missing \"types\" arrays, etc). It pins strict: false if you didn''t have it set, so the migration itself is behavior-preserving. https://github.com/zi-gae/ts6to7 — feedback and broken-tsconfig reports welcome." [ref=f6e41]':
+                - generic [ref=f6e43]:
+                  - text: 1 point by
+                  - link "zigae" [ref=f6e44] [cursor=pointer]:
+                    - /url: user?id=zigae
+                  - generic "2026-07-09T03:24:56 1783567496" [ref=f6e45]:
+                    - link "0 minutes ago" [ref=f6e46] [cursor=pointer]:
+                      - /url: item?id=48840605
+                  - text: "[flagged]"
+                  - generic [ref=f6e47]:
+                    - text: "|"
+                    - link "parent" [ref=f6e48] [cursor=pointer]:
+                      - /url: item?id=48833715
+                    - text: "|"
+                    - link "context" [ref=f6e49] [cursor=pointer]:
+                      - /url: item?id=48833715#48840605
+                    - text: "|"
+                    - link "edit" [ref=f6e50] [cursor=pointer]:
+                      - /url: edit?id=48840605
+                    - text: "|"
+                    - link "delete" [ref=f6e51] [cursor=pointer]:
+                      - /url: delete-confirm?id=48840605&goto=threads%3Fid%3Dzigae
+                    - link "[–]" [ref=f6e52] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - generic [ref=f6e53]:
+                      - text: "| on:"
+                      - link "TypeScript 7" [ref=f6e54] [cursor=pointer]:
+                        - /url: item?id=48833715
+                - generic [ref=f6e55]:
+                  - generic [ref=f6e56]:
+                    - text: "For anyone staring at an older tsconfig wondering how much work the upgrade is: I built a codemod that does the mechanical part."
+                    - paragraph
+                    - code [ref=f6e58]: npx ts6to7 --dry
+                    - text: "It rewrites the options TS7 removed (target: es5, module: umd, baseUrl, importsNotUsedAsValues, ...) in place — comments and formatting preserved — bumps the typescript dep, and prints a checklist of what it can't safely change (compiler-API tools like ts-node, missing \"types\" arrays, etc). It pins strict: false if you didn't have it set, so the migration itself is behavior-preserving."
+                    - paragraph [ref=f6e59]:
+                      - link "https://github.com/zi-gae/ts6to7" [ref=f6e60] [cursor=pointer]:
+                        - /url: https://github.com/zi-gae/ts6to7
+                      - text: — feedback and broken-tsconfig reports welcome.
+                  - generic:
+                    - paragraph
+    - row "Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact Search:" [ref=f6e61]:
+      - cell "Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact Search:" [ref=f6e62]:
+        - img
+        - table [ref=f6e63]:
+          - rowgroup [ref=f6e64]:
+            - row [ref=f6e65]:
+              - cell [ref=f6e66]
+        - generic [ref=f6e67]:
+          - generic [ref=f6e68]:
+            - link "Guidelines" [ref=f6e69] [cursor=pointer]:
+              - /url: newsguidelines.html
+            - text: "|"
+            - link "FAQ" [ref=f6e70] [cursor=pointer]:
+              - /url: newsfaq.html
+            - text: "|"
+            - link "Lists" [ref=f6e71] [cursor=pointer]:
+              - /url: lists
+            - text: "|"
+            - link "API" [ref=f6e72] [cursor=pointer]:
+              - /url: https://github.com/HackerNews/API
+            - text: "|"
+            - link "Security" [ref=f6e73] [cursor=pointer]:
+              - /url: security.html
+            - text: "|"
+            - link "Legal" [ref=f6e74] [cursor=pointer]:
+              - /url: https://www.ycombinator.com/legal/
+            - text: "|"
+            - link "Apply to YC" [ref=f6e75] [cursor=pointer]:
+              - /url: https://www.ycombinator.com/apply/
+            - text: "|"
+            - link "Contact" [ref=f6e76] [cursor=pointer]:
+              - /url: mailto:hn@ycombinator.com
+          - generic [ref=f6e77]:
+            - text: "Search:"
+            - textbox [ref=f6e78]

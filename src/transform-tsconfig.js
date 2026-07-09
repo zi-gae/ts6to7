@@ -152,12 +152,21 @@ export function transformTsconfig(text) {
 
   // --- strict becomes the default in TS7 -----------------------------------
   if (!Object.prototype.hasOwnProperty.call(co, 'strict')) {
-    edit('strict', false);
-    changes.push('added explicit strict: false (TS7 flips the default to true)');
-    warnings.push(
-      'strict: false was added to preserve current behavior. Consider deleting it and fixing ' +
-        'strict-mode errors instead — TS7 projects are strict by default.',
-    );
+    // An extending config may inherit strict from its base; pinning false here
+    // would override the base and change behavior.
+    if (json.extends !== undefined) {
+      warnings.push(
+        'strict is not set here and this config extends another. TS7 defaults strict to true — ' +
+          'make sure the extended chain sets it explicitly, or add strict yourself.',
+      );
+    } else {
+      edit('strict', false);
+      changes.push('added explicit strict: false (TS7 flips the default to true)');
+      warnings.push(
+        'strict: false was added to preserve current behavior. Consider deleting it and fixing ' +
+          'strict-mode errors instead — TS7 projects are strict by default.',
+      );
+    }
   }
 
   // --- types auto-inclusion behavior change (report only) -------------------

@@ -1,0 +1,29 @@
+- generic [ref=f1e1]:
+  - text: Login
+  - generic [ref=f1e2]:
+    - table [ref=f1e3]:
+      - rowgroup [ref=f1e4]:
+        - row "username:" [ref=f1e5]:
+          - cell "username:" [ref=f1e6]
+          - cell [ref=f1e7]:
+            - textbox [active] [ref=f1e8]
+        - row "password:" [ref=f1e9]:
+          - cell "password:" [ref=f1e10]
+          - cell [ref=f1e11]:
+            - textbox [ref=f1e12]
+    - button "login" [ref=f1e13]
+  - link "Forgot your password?" [ref=f1e14] [cursor=pointer]:
+    - /url: forgot
+  - text: Create Account
+  - generic [ref=f1e15]:
+    - table [ref=f1e16]:
+      - rowgroup [ref=f1e17]:
+        - row "username:" [ref=f1e18]:
+          - cell "username:" [ref=f1e19]
+          - cell [ref=f1e20]:
+            - textbox [ref=f1e21]
+        - row "password:" [ref=f1e22]:
+          - cell "password:" [ref=f1e23]
+          - cell [ref=f1e24]:
+            - textbox [ref=f1e25]
+    - button "create account" [ref=f1e26]

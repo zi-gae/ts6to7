@@ -1,0 +1,167 @@
+- generic [active] [ref=f21e1]:
+  - banner [ref=f21e2]:
+    - navigation [ref=f21e3]:
+      - generic [ref=f21e4]:
+        - link "GeekNews" [ref=f21e6] [cursor=pointer]:
+          - /url: /
+        - link "최신글" [ref=f21e7] [cursor=pointer]:
+          - /url: /new
+        - link "예전글" [ref=f21e8] [cursor=pointer]:
+          - /url: /past
+        - link "쓰레드" [ref=f21e9] [cursor=pointer]:
+          - /url: /threads
+        - link "댓글" [ref=f21e10] [cursor=pointer]:
+          - /url: /comments
+        - link "Ask" [ref=f21e11] [cursor=pointer]:
+          - /url: /ask
+        - link "Show" [ref=f21e12] [cursor=pointer]:
+          - /url: /show
+        - link "GN⁺" [ref=f21e13] [cursor=pointer]:
+          - /url: /plus
+        - link "Weekly" [ref=f21e14] [cursor=pointer]:
+          - /url: /weekly
+        - link "GeekBots" [ref=f21e15] [cursor=pointer]:
+          - /url: /geekbots
+        - link "GeekBadge" [ref=f21e16] [cursor=pointer]:
+          - /url: /geekbadge
+        - link "후원" [ref=f21e17] [cursor=pointer]:
+          - /url: /support
+        - text: "|"
+        - link "글등록" [ref=f21e18] [cursor=pointer]:
+          - /url: /write
+      - generic [ref=f21e19]:
+        - generic [ref=f21e20]:
+          - generic [ref=f21e21]: 검색
+          - searchbox "검색" [ref=f21e22]
+        - link "doscm164(21)" [ref=f21e24] [cursor=pointer]:
+          - /url: /@doscm164
+  - main [ref=f21e25]:
+    - article [ref=f21e26]:
+      - generic [ref=f21e27]:
+        - generic [ref=f21e28]:
+          - generic [ref=f21e30]: "*"
+          - generic [ref=f21e31]:
+            - 'link "Show GN: ts6to7 - TypeScript 7(tsgo) 마이그레이션 자동화 codemod" [ref=f21e32] [cursor=pointer]':
+              - /url: https://github.com/zi-gae/ts6to7
+              - 'heading "Show GN: ts6to7 - TypeScript 7(tsgo) 마이그레이션 자동화 codemod" [level=1] [ref=f21e33]'
+            - text: (github.com/zi-gae)
+          - generic [ref=f21e34]:
+            - text: 1P by
+            - link "doscm164" [ref=f21e35] [cursor=pointer]:
+              - /url: /@doscm164
+            - time [ref=f21e36]: 2초전
+            - generic [ref=f21e37]:
+              - text: "|"
+              - link "★ favorite" [ref=f21e38] [cursor=pointer]:
+                - /url: javascript:fav(31261, "favorite")
+            - generic [ref=f21e39]:
+              - text: "|"
+              - link "delete" [ref=f21e40] [cursor=pointer]:
+                - /url: javascript:delete_item(31261)
+            - text: "|"
+            - link "댓글과 토론" [ref=f21e41] [cursor=pointer]:
+              - /url: topic?id=31261
+          - generic [ref=f21e44]:
+            - paragraph [ref=f21e45]: 어제 TypeScript 7이 정식 릴리스됐습니다. Go로 재작성된 네이티브 컴파일러(tsgo)라 약 10배 빨라졌지만, TS6에서 deprecated였던 컴파일러 옵션이 전부 제거됐고 strict 기본값도 true로 바뀌어서 — 오래된 tsconfig를 가진 프로젝트는 업그레이드가 그냥 안 됩니다.
+            - paragraph [ref=f21e46]: 그 기계적인 부분을 자동화하는 codemod를 만들었습니다.
+            - paragraph [ref=f21e47]:
+              - text: "npx ts6to7 --dry # 미리보기 (아무것도 안 씌)"
+              - text: "npx ts6to7 # 적용"
+            - paragraph [ref=f21e48]: "하는 일:"
+            - list [ref=f21e49]:
+              - listitem [ref=f21e50]: tsconfig*.json을 제자리에서 수정 — jsonc-parser로 편집해서 주석과 포맷이 그대로 유지됩니다
+              - listitem [ref=f21e51]: "제거된 옵션을 TS7 등가물로 변환: target: es5 → ES2015, module: umd/amd → ESNext, moduleResolution: node → NodeNext/Bundler, importsNotUsedAsValues → verbatimModuleSyntax 등"
+              - listitem [ref=f21e52]: baseUrl은 paths로 폴딩
+              - listitem [ref=f21e53]: typescript 의존성을 ^7.0.0으로 범프
+              - listitem [ref=f21e54]: strict가 미설정이었다면 false로 고정 — 마이그레이션 자체는 동작을 바꾸지 않고, strict 전환은 별도 결정으로 남겨둡니다
+              - listitem [ref=f21e55]: 안전하게 자동 변환할 수 없는 것들(ES5 전용 런타임, ts-node/ts-jest 같은 구 컴파일러 API 기반 도구, types 배열 누락 등)은 파일 단위로 스코프된 "수동 확인 필요" 체크리스트로 출력
+            - paragraph [ref=f21e56]: 모노레포도 지원합니다 (모든 패키지 스캔).
+            - paragraph [ref=f21e57]: 아직 초기 버전(0.1.1)이라, tsconfig가 잘못 변환되는 케이스가 있으면 해당 tsconfig를 첨부한 이슈로 알려주시면 큰 도움이 됩니다.
+        - generic [ref=f21e58]:
+          - heading "함께 보면 좋은 글 β" [level=2] [ref=f21e59]:
+            - text: 함께 보면 좋은 글
+            - generic "베타" [ref=f21e60]: β
+          - list [ref=f21e61]:
+            - listitem [ref=f21e62]:
+              - link "TypeScript 7.0 발표" [ref=f21e64] [cursor=pointer]:
+                - /url: /topic?id=31249
+            - listitem [ref=f21e65]:
+              - link "TypeScript v7 Released" [ref=f21e67] [cursor=pointer]:
+                - /url: /topic?id=31242
+            - listitem [ref=f21e68]:
+              - link "date-light — 3.11KB TypeScript 날짜 유틸리티 라이브러리" [ref=f21e70] [cursor=pointer]:
+                - /url: /topic?id=30689
+            - listitem [ref=f21e71]:
+              - link "DB, 백엔드 서버, 웹, 하이브리드 앱을 한번에 개발할 수 있는 Typescript 풀스택 프레임워크 (Bun.js기반)" [ref=f21e73] [cursor=pointer]:
+                - /url: /topic?id=30055
+            - listitem [ref=f21e74]:
+              - link "의식의 흐름으로 개발 된 자바스크립트 번들러(Zig Native typescript Transpiler & Compiler)" [ref=f21e76] [cursor=pointer]:
+                - /url: /topic?id=29734
+        - heading "댓글과 토론" [level=2] [ref=f21e77]
+        - generic [ref=f21e79]:
+          - textbox "• 친절하고 점잖은 댓글을 남겨주세요 • 주제와 관련된 내용으로 작성해주세요" [ref=f21e81]:
+            - /placeholder: "• 친절하고 점잖은 댓글을 남겨주세요\n• 주제와 관련된 내용으로 작성해주세요"
+          - generic [ref=f21e82]:
+            - generic [ref=f21e84]:
+              - checkbox [ref=f21e85]
+              - generic [ref=f21e86]: 댓글 알림 받기
+            - button "댓글 달기" [ref=f21e87]
+  - contentinfo [ref=f21e88]:
+    - generic [ref=f21e89]:
+      - generic [ref=f21e90]:
+        - link "처음 오셨나요" [ref=f21e91] [cursor=pointer]:
+          - /url: /start
+        - link "사이트 이용법" [ref=f21e92] [cursor=pointer]:
+          - /url: /guidelines
+        - link "FAQ" [ref=f21e93] [cursor=pointer]:
+          - /url: /faq
+        - link "About" [ref=f21e94] [cursor=pointer]:
+          - /url: /about
+        - link "후원하기" [ref=f21e95] [cursor=pointer]:
+          - /url: /support
+        - link "이용약관" [ref=f21e96] [cursor=pointer]:
+          - /url: /terms
+        - link "개인정보 처리방침" [ref=f21e97] [cursor=pointer]:
+          - /url: /privacy
+        - text: "|"
+        - link "Blog" [ref=f21e98] [cursor=pointer]:
+          - /url: /blog
+        - link "Lists" [ref=f21e99] [cursor=pointer]:
+          - /url: /lists
+        - link "RSS" [ref=f21e100] [cursor=pointer]:
+          - /url: https://news.hada.io/rss/news
+        - text: "|"
+        - link "Bookmarklet" [ref=f21e101] [cursor=pointer]:
+          - /url: /bookmarklet
+      - generic [ref=f21e102]:
+        - link "X (Twitter)" [ref=f21e103] [cursor=pointer]:
+          - /url: https://x.com/GeekNewsHada
+        - link "Facebook" [ref=f21e104] [cursor=pointer]:
+          - /url: https://facebook.com/GeekNewsHada
+        - generic [ref=f21e105]:
+          - text: "|"
+          - link "긱뉴스봇" [ref=f21e106] [cursor=pointer]:
+            - /url: /geekbots
+          - text: ":"
+          - link "Slack" [ref=f21e107] [cursor=pointer]:
+            - /url: /slack
+          - link "잔디" [ref=f21e108] [cursor=pointer]:
+            - /url: /jandibot
+          - link "Discord" [ref=f21e109] [cursor=pointer]:
+            - /url: /discordbot
+          - link "Teams" [ref=f21e110] [cursor=pointer]:
+            - /url: /teamsbot
+          - link "Dooray!" [ref=f21e111] [cursor=pointer]:
+            - /url: /dooraybot
+          - link "Google Chat" [ref=f21e112] [cursor=pointer]:
+            - /url: /googlechatbot
+          - link "Mattermost" [ref=f21e113] [cursor=pointer]:
+            - /url: /mattermostbot
+          - link "Swit" [ref=f21e114] [cursor=pointer]:
+            - /url: /switbot
+    - generic [ref=f21e115]:
+      - 'button "화면 모드: 시스템 설정" [ref=f21e117] [cursor=pointer]':
+        - img [ref=f21e118]
+      - generic [ref=f21e120]:
+        - generic [ref=f21e121]: 검색
+        - searchbox "검색" [ref=f21e122]

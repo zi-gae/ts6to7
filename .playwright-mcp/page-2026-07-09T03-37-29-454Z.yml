@@ -1,0 +1,130 @@
+- generic [active] [ref=f22e1]:
+  - banner [ref=f22e2]:
+    - navigation [ref=f22e3]:
+      - generic [ref=f22e4]:
+        - link "GeekNews" [ref=f22e6] [cursor=pointer]:
+          - /url: /
+        - link "최신글" [ref=f22e7] [cursor=pointer]:
+          - /url: /new
+        - link "예전글" [ref=f22e8] [cursor=pointer]:
+          - /url: /past
+        - link "쓰레드" [ref=f22e9] [cursor=pointer]:
+          - /url: /threads
+        - link "댓글" [ref=f22e10] [cursor=pointer]:
+          - /url: /comments
+        - link "Ask" [ref=f22e11] [cursor=pointer]:
+          - /url: /ask
+        - link "Show" [ref=f22e12] [cursor=pointer]:
+          - /url: /show
+        - link "GN⁺" [ref=f22e13] [cursor=pointer]:
+          - /url: /plus
+        - link "Weekly" [ref=f22e14] [cursor=pointer]:
+          - /url: /weekly
+        - link "GeekBots" [ref=f22e15] [cursor=pointer]:
+          - /url: /geekbots
+        - link "GeekBadge" [ref=f22e16] [cursor=pointer]:
+          - /url: /geekbadge
+        - link "후원" [ref=f22e17] [cursor=pointer]:
+          - /url: /support
+        - text: "|"
+        - link "글등록" [ref=f22e18] [cursor=pointer]:
+          - /url: /write
+        - generic [ref=f22e19]: "| edit"
+      - generic [ref=f22e20]:
+        - generic [ref=f22e21]:
+          - generic [ref=f22e22]: 검색
+          - searchbox "검색" [ref=f22e23]
+        - link "doscm164(21)" [ref=f22e25] [cursor=pointer]:
+          - /url: /@doscm164
+  - main [ref=f22e26]:
+    - generic [ref=f22e27]:
+      - heading "404 Not Found" [level=1] [ref=f22e29]
+      - generic [ref=f22e30]:
+        - heading "아마도 글이 지워진거 같습니다!" [level=3] [ref=f22e31]
+        - paragraph [ref=f22e32]: GeekNews는 소프트웨어 개발 뉴스, 다양한 기술 관련 새소식, 스타트업 정보와 노하우, 세상의 재미난 것들이 올라오는 뉴스 서비스입니다.
+        - paragraph [ref=f22e33]: 아마도 어디엔가 공유된 링크를 클릭하셔서 여기에 오셨을텐데, 링크가 잘못 되었거나 작성자가 지우신거 같아요.
+        - paragraph [ref=f22e34]:
+          - link "GeekNews 의 다른 뉴스들 보러가기" [ref=f22e35] [cursor=pointer]:
+            - /url: /
+        - list [ref=f22e36]:
+          - listitem [ref=f22e37]:
+            - text: GeekNews가 어떤 곳인지 궁금하시면
+            - link "About GeekNews" [ref=f22e38] [cursor=pointer]:
+              - /url: /about
+            - text: 를 참고해 주세요.
+          - listitem [ref=f22e39]:
+            - text: 꼭
+            - link "GeekNews 이용법" [ref=f22e40] [cursor=pointer]:
+              - /url: /guidelines
+            - text: 을 한번 읽어보세요.
+          - listitem [ref=f22e41]: 좋다고 생각하는 글과 댓글엔 ▲ 표시를 눌러서 투표 해보세요. 더 좋은 글이 상단에 배치됩니다.
+          - listitem [ref=f22e42]: 나중에 찾아봐야할 글과 댓글엔 ★ favorite 를 눌러서 기록해 두세요
+          - listitem [ref=f22e43]:
+            - text: 새로운 서비스 나 오픈소스를 만들거나 찾았다거나, 다른 사람이 함께 보면 좋은 기술 뉴스가 있다면
+            - link "글등록" [ref=f22e44] [cursor=pointer]:
+              - /url: /write
+            - text: 에서 글을 올려주세요. 남들이 내 글과 댓글에 투표하면 Karma 를 얻게됩니다.
+          - listitem [ref=f22e45]:
+            - text: X (Twitter)
+            - link "@GeekNewsHada" [ref=f22e46] [cursor=pointer]:
+              - /url: https://x.com/GeekNewsHada
+            - text: 를 팔로우 하시면 새로운 글을 편하게 받아보실수 있습니다.
+  - contentinfo [ref=f22e47]:
+    - generic [ref=f22e48]:
+      - generic [ref=f22e49]:
+        - link "처음 오셨나요" [ref=f22e50] [cursor=pointer]:
+          - /url: /start
+        - link "사이트 이용법" [ref=f22e51] [cursor=pointer]:
+          - /url: /guidelines
+        - link "FAQ" [ref=f22e52] [cursor=pointer]:
+          - /url: /faq
+        - link "About" [ref=f22e53] [cursor=pointer]:
+          - /url: /about
+        - link "후원하기" [ref=f22e54] [cursor=pointer]:
+          - /url: /support
+        - link "이용약관" [ref=f22e55] [cursor=pointer]:
+          - /url: /terms
+        - link "개인정보 처리방침" [ref=f22e56] [cursor=pointer]:
+          - /url: /privacy
+        - text: "|"
+        - link "Blog" [ref=f22e57] [cursor=pointer]:
+          - /url: /blog
+        - link "Lists" [ref=f22e58] [cursor=pointer]:
+          - /url: /lists
+        - link "RSS" [ref=f22e59] [cursor=pointer]:
+          - /url: https://news.hada.io/rss/news
+        - text: "|"
+        - link "Bookmarklet" [ref=f22e60] [cursor=pointer]:
+          - /url: /bookmarklet
+      - generic [ref=f22e61]:
+        - link "X (Twitter)" [ref=f22e62] [cursor=pointer]:
+          - /url: https://x.com/GeekNewsHada
+        - link "Facebook" [ref=f22e63] [cursor=pointer]:
+          - /url: https://facebook.com/GeekNewsHada
+        - generic [ref=f22e64]:
+          - text: "|"
+          - link "긱뉴스봇" [ref=f22e65] [cursor=pointer]:
+            - /url: /geekbots
+          - text: ":"
+          - link "Slack" [ref=f22e66] [cursor=pointer]:
+            - /url: /slack
+          - link "잔디" [ref=f22e67] [cursor=pointer]:
+            - /url: /jandibot
+          - link "Discord" [ref=f22e68] [cursor=pointer]:
+            - /url: /discordbot
+          - link "Teams" [ref=f22e69] [cursor=pointer]:
+            - /url: /teamsbot
+          - link "Dooray!" [ref=f22e70] [cursor=pointer]:
+            - /url: /dooraybot
+          - link "Google Chat" [ref=f22e71] [cursor=pointer]:
+            - /url: /googlechatbot
+          - link "Mattermost" [ref=f22e72] [cursor=pointer]:
+            - /url: /mattermostbot
+          - link "Swit" [ref=f22e73] [cursor=pointer]:
+            - /url: /switbot
+    - generic [ref=f22e74]:
+      - 'button "화면 모드: 시스템 설정" [ref=f22e76] [cursor=pointer]':
+        - img [ref=f22e77]
+      - generic [ref=f22e79]:
+        - generic [ref=f22e80]: 검색
+        - searchbox "검색" [ref=f22e81]

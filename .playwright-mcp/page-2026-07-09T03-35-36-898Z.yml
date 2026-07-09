@@ -1,0 +1,74 @@
+- generic [ref=f12e1]:
+  - banner [ref=f12e2]:
+    - navigation [ref=f12e3]:
+      - generic [ref=f12e4]:
+        - link "GeekNews" [ref=f12e6] [cursor=pointer]:
+          - /url: /
+        - link "최신글" [ref=f12e7] [cursor=pointer]:
+          - /url: /new
+        - link "예전글" [ref=f12e8] [cursor=pointer]:
+          - /url: /past
+        - link "쓰레드" [ref=f12e9] [cursor=pointer]:
+          - /url: /threads
+        - link "댓글" [ref=f12e10] [cursor=pointer]:
+          - /url: /comments
+        - link "Ask" [ref=f12e11] [cursor=pointer]:
+          - /url: /ask
+        - link "Show" [ref=f12e12] [cursor=pointer]:
+          - /url: /show
+        - link "GN⁺" [ref=f12e13] [cursor=pointer]:
+          - /url: /plus
+        - link "Weekly" [ref=f12e14] [cursor=pointer]:
+          - /url: /weekly
+        - link "GeekBots" [ref=f12e15] [cursor=pointer]:
+          - /url: /geekbots
+        - link "GeekBadge" [ref=f12e16] [cursor=pointer]:
+          - /url: /geekbadge
+        - link "후원" [ref=f12e17] [cursor=pointer]:
+          - /url: /support
+        - text: "|"
+        - link "글등록" [ref=f12e18] [cursor=pointer]:
+          - /url: /write
+      - generic [ref=f12e19]:
+        - generic [ref=f12e20]:
+          - generic [ref=f12e21]: 검색
+          - searchbox "검색" [ref=f12e22]
+        - link "doscm164(21)" [ref=f12e24] [cursor=pointer]:
+          - /url: /@doscm164
+  - main [ref=f12e25]:
+    - article [ref=f12e26]:
+      - generic [ref=f12e29]:
+        - generic [ref=f12e30]: 타입
+        - generic [ref=f12e31]:
+          - radio [checked] [ref=f12e32]
+          - text: 뉴스
+          - radio [ref=f12e33]
+          - text: Ask
+          - radio [ref=f12e34]
+          - text: Show
+        - generic [ref=f12e35]: 카테고리에 따라 노출 방식이 달라질 수 있으니, 등록 전 한 번 더 확인해주세요.
+        - generic [ref=f12e36]:
+          - text: 뉴스 등록 전
+          - link "사이트 이용법" [ref=f12e37] [cursor=pointer]:
+            - /url: /guidelines
+          - text: 을 참고해 주세요. 한 사용자의 최근 등록 글이 특정 출처에 과도하게 집중되면 등록이 제한될 수 있습니다. 세부 운영 기준은
+          - link "이용약관" [ref=f12e38] [cursor=pointer]:
+            - /url: /terms
+          - text: 에서 확인하실 수 있습니다.
+        - generic [ref=f12e39]: 제목
+        - textbox "타입 제목" [active] [ref=f12e41]:
+          - /placeholder: 뉴스의 주제가 잘 드러나는 제목을 적어주세요
+        - generic [ref=f12e42]: URL
+        - textbox "URL" [ref=f12e44]:
+          - /placeholder: url 주소를 적어주세요
+        - generic [ref=f12e45]: 내용
+        - textbox "내용" [ref=f12e47]:
+          - /placeholder: "원글의 핵심 내용을 직접 요약해 주세요.\n영문 기사라면 한글 번역요약이나 읽은 포인트를 함께 적어주시면 좋습니다."
+        - generic [ref=f12e49]: 알림
+        - generic [ref=f12e51]:
+          - checkbox "알림" [ref=f12e52]
+          - generic [ref=f12e53]: 댓글 알림 받기
+        - generic [ref=f12e54]: 확인
+        - button "등록" [disabled] [ref=f12e56]
+        - link "Bookmarklet" [ref=f12e58] [cursor=pointer]:
+          - /url: bookmarklet

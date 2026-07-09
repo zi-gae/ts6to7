@@ -1,0 +1,3 @@
+[     189ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://news.ycombinator.com/login?goto=item%3Fid%3D48833715:0
+[     189ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://news.ycombinator.com/login?goto=item%3Fid%3D48833715:0
+[    8626ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://news.ycombinator.com/login:0

@@ -1,0 +1,71 @@
+- generic [active] [ref=f29e1]:
+  - iframe [ref=f29e2]:
+    
+  - generic [ref=f29e10]:
+    - alert [ref=f29e11]:
+      - generic [ref=f29e13]:
+        - generic [ref=f29e202]:
+          - generic [ref=f29e203]: 전송 중...
+          - alert [ref=f29e205] [cursor=pointer]: 취소
+        - button "닫기" [ref=f29e206] [cursor=pointer]
+    - main [ref=f29e15]:
+      - region "New account comment auto-flagged — I'm the tool's author" [ref=f29e19]:
+        - generic [ref=f29e22]: New account comment auto-flagged — I'm the tool's author
+        - generic [ref=f29e23]:
+          - generic [ref=f29e25]: hn@ycombinator.com
+          - textbox "제목" [ref=f29e30]: New account comment auto-flagged — I'm the tool's author
+        - table [ref=f29e31]:
+          - rowgroup [ref=f29e32]:
+            - row "Hi — I'm the author of ts6to7, an open-source codemod for the TypeScript 7 migration (https://github.com/zi-gae/ts6to7).I made a new account (zigae) and commented about it on the TypeScript 7 thread (https://news.ycombinator.com/item?id=48833715), and the comment got auto-flagged — I assume because the account is new and the comment contains a link.It's my own tool, MIT-licensed, directly relevant to the thread. Could you take a look? You can see the comment at https://news.ycombinator.com/threads?id=zigaeI'm also planning a Show HN for it soon — apologies in advance if that trips the same filter.Thanks!" [ref=f29e33]:
+              - cell "Hi — I'm the author of ts6to7, an open-source codemod for the TypeScript 7 migration (https://github.com/zi-gae/ts6to7).I made a new account (zigae) and commented about it on the TypeScript 7 thread (https://news.ycombinator.com/item?id=48833715), and the comment got auto-flagged — I assume because the account is new and the comment contains a link.It's my own tool, MIT-licensed, directly relevant to the thread. Could you take a look? You can see the comment at https://news.ycombinator.com/threads?id=zigaeI'm also planning a Show HN for it soon — apologies in advance if that trips the same filter.Thanks!" [ref=f29e34]:
+                - table [ref=f29e42]:
+                  - rowgroup [ref=f29e43]:
+                    - row "Hi — I'm the author of ts6to7, an open-source codemod for the TypeScript 7 migration (https://github.com/zi-gae/ts6to7).I made a new account (zigae) and commented about it on the TypeScript 7 thread (https://news.ycombinator.com/item?id=48833715), and the comment got auto-flagged — I assume because the account is new and the comment contains a link.It's my own tool, MIT-licensed, directly relevant to the thread. Could you take a look? You can see the comment at https://news.ycombinator.com/threads?id=zigaeI'm also planning a Show HN for it soon — apologies in advance if that trips the same filter.Thanks!" [ref=f29e44]:
+                      - cell "Hi — I'm the author of ts6to7, an open-source codemod for the TypeScript 7 migration (https://github.com/zi-gae/ts6to7).I made a new account (zigae) and commented about it on the TypeScript 7 thread (https://news.ycombinator.com/item?id=48833715), and the comment got auto-flagged — I assume because the account is new and the comment contains a link.It's my own tool, MIT-licensed, directly relevant to the thread. Could you take a look? You can see the comment at https://news.ycombinator.com/threads?id=zigaeI'm also planning a Show HN for it soon — apologies in advance if that trips the same filter.Thanks!" [ref=f29e45]:
+                        - textbox "메일 본문" [ref=f29e48]
+            - row "서식 지정 옵션" [ref=f29e53]:
+              - cell "서식 지정 옵션" [ref=f29e54]:
+                - generic [ref=f29e56]:
+                  - toolbar "서식 지정 옵션" [ref=f29e60]:
+                    - button "실행취소 ‪(⌘Z)‬" [ref=f29e61] [cursor=pointer]
+                    - button "재실행 ‪(⌘Y)‬" [ref=f29e65] [cursor=pointer]
+                    - listbox "글꼴 ‪(⌘⇧5, ⌘⇧6)‬" [ref=f29e70] [cursor=pointer]:
+                      - option "Sans Serif" [selected] [ref=f29e73]
+                    - button "크기 ‪(⌘⇧-, ⌘⇧+)‬" [ref=f29e76] [cursor=pointer]
+                    - button "굵게 ‪(⌘B)‬" [ref=f29e83] [cursor=pointer]
+                    - button "기울임꼴 ‪(⌘I)‬" [ref=f29e87] [cursor=pointer]
+                    - button "밑줄 ‪(⌘U)‬" [ref=f29e91] [cursor=pointer]
+                    - button "텍스트 색상" [ref=f29e95] [cursor=pointer]
+                    - button "정렬" [ref=f29e102] [cursor=pointer]
+                    - button "번호 매기기 목록 ‪(⌘⇧7)‬" [ref=f29e108] [cursor=pointer]
+                    - button "글머리 기호 목록 ‪(⌘⇧8)‬" [ref=f29e112] [cursor=pointer]
+                    - button "덜 들여쓰기 ‪(⌘[)‬" [ref=f29e116] [cursor=pointer]
+                    - button "더 들여쓰기 ‪(⌘])‬" [ref=f29e120] [cursor=pointer]
+                    - button "인용구 ‪(⌘⇧9)‬" [ref=f29e124] [cursor=pointer]
+                    - button "취소선 ‪(⌘⇧X)‬" [ref=f29e129] [cursor=pointer]
+                    - button "서식 제거 ‪(⌘\\)‬" [ref=f29e134] [cursor=pointer]
+                  - group [ref=f29e139]:
+                    - rowgroup [ref=f29e140]:
+                      - row "보내기 ‪(⌘Enter)‬ 보내기 옵션 더보기 서식 지정 옵션 파일 첨부 링크 삽입 ‪(⌘K)‬ 그림 이모티콘 삽입 ‪(⌘⇧2)‬ Drive에 저장된 파일 삽입 사진 삽입 비밀 모드 전환 서명 삽입 옵션 더보기 임시보관 메일 삭제 ‪(⌘⇧D)‬" [ref=f29e141]:
+                        - cell "보내기 ‪(⌘Enter)‬ 보내기 옵션 더보기" [ref=f29e142]:
+                          - generic [ref=f29e143]:
+                            - generic:
+                              - button "보내기 ‪(⌘Enter)‬" [disabled]: 보내기
+                              - button "보내기 옵션 더보기"
+                        - cell "서식 지정 옵션" [ref=f29e148]:
+                          - generic "서식 지정 옵션" [ref=f29e149]:
+                            - button [expanded] [pressed] [ref=f29e150] [cursor=pointer]
+                        - cell "파일 첨부 링크 삽입 ‪(⌘K)‬ 그림 이모티콘 삽입 ‪(⌘⇧2)‬ Drive에 저장된 파일 삽입 사진 삽입 비밀 모드 전환 서명 삽입" [ref=f29e155]:
+                          - generic [ref=f29e156]:
+                            - button "파일 첨부" [ref=f29e157] [cursor=pointer]
+                            - button "링크 삽입 ‪(⌘K)‬" [ref=f29e162] [cursor=pointer]
+                            - button "그림 이모티콘 삽입 ‪(⌘⇧2)‬" [ref=f29e167] [cursor=pointer]
+                            - button "Drive에 저장된 파일 삽입" [ref=f29e172] [cursor=pointer]
+                            - button "사진 삽입" [ref=f29e177] [cursor=pointer]
+                            - button "비밀 모드 전환" [ref=f29e182] [cursor=pointer]
+                            - button "서명 삽입" [ref=f29e187] [cursor=pointer]
+                        - cell "옵션 더보기" [ref=f29e192]:
+                          - button "옵션 더보기" [ref=f29e193] [cursor=pointer]
+                        - cell "임시보관 메일 삭제 ‪(⌘⇧D)‬" [ref=f29e196]:
+                          - button "임시보관 메일 삭제 ‪(⌘⇧D)‬" [ref=f29e198] [cursor=pointer]
+  - generic [ref=f29e212]: 로드 중...
