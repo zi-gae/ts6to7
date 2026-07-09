@@ -10,7 +10,7 @@ const green = (s) => (tty ? `\x1b[32m${s}\x1b[0m` : s);
 const yellow = (s) => (tty ? `\x1b[33m${s}\x1b[0m` : s);
 const dim = (s) => (tty ? `\x1b[2m${s}\x1b[0m` : s);
 
-const HELP = `ts6to7 — migrate a TypeScript 6 project to TypeScript 7 (tsgo)
+const HELP = `ts6to7 — migrate a TypeScript 5 or 6 project to TypeScript 7 (tsgo)
 
 Usage:
   npx ts6to7 [directory] [options]
@@ -26,7 +26,8 @@ What it does:
     - moduleResolution node10/classic -> NodeNext or Bundler
     - importsNotUsedAsValues / preserveValueImports -> verbatimModuleSyntax
     - baseUrl                   -> folded into "paths" (removed in TS7)
-    - removes charset, keyofStringsOnly, out, noImplicitUseStrict, ...
+    - removes charset, keyofStringsOnly, out, ignoreDeprecations, ...
+    - removes "prepend" from project references (gone since TS6)
     - pins strict: false if unset (TS7 defaults strict to true)
   package.json
     - typescript dependency     -> ^7.0.0

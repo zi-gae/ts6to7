@@ -14,6 +14,7 @@ const REMOVED_OPTIONS = {
   suppressExcessPropertyErrors: null,
   suppressImplicitAnyIndexErrors: null,
   out: 'use "outFile" instead if you relied on single-file output',
+  ignoreDeprecations: 'the deprecated options it silenced are gone, so the flag has no meaning',
 };
 
 function lower(value) {
@@ -39,6 +40,27 @@ export function transformTsconfig(text) {
   let result = text;
 
   const json = parse(text) ?? {};
+
+  // --- references[].prepend: deprecated in TS 5.5, gone since TS6 ----------
+  // Handled before the compilerOptions guard: solution-style tsconfigs have
+  // references but no compilerOptions.
+  if (Array.isArray(json.references)) {
+    let prepends = 0;
+    json.references.forEach((ref, i) => {
+      if (ref && typeof ref === 'object' && Object.prototype.hasOwnProperty.call(ref, 'prepend')) {
+        result = applyEdits(result, modify(result, ['references', i, 'prepend'], undefined, FORMAT));
+        prepends += 1;
+      }
+    });
+    if (prepends > 0) {
+      changes.push(`removed "prepend" from ${prepends} project reference(s) (option no longer exists in TS7)`);
+      warnings.push(
+        'Project references no longer prepend referenced output. If you relied on prepend to ' +
+          'concatenate outputs, switch to a bundler or explicit outFile ordering.',
+      );
+    }
+  }
+
   const co = json.compilerOptions;
   if (typeof co !== 'object' || co === null) {
     return { text: result, changes, warnings };

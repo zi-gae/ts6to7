@@ -9,7 +9,7 @@
   "bugs": {
     "url": "https://github.com/zi-gae/ts6to7/issues"
   },
-  "description": "Codemod that migrates a TypeScript 6 project to TypeScript 7 (tsgo): rewrites tsconfig.json options removed in TS7 and flags changes that need manual review.",
+  "description": "Codemod that migrates a TypeScript 5 or 6 project to TypeScript 7 (tsgo): rewrites tsconfig.json options removed in TS7 and flags changes that need manual review.",
   "type": "module",
   "bin": {
     "ts6to7": "bin/ts6to7.js"
@@ -29,7 +29,9 @@
     "codemod",
     "migration",
     "tsgo",
-    "typescript-7"
+    "typescript-7",
+    "typescript-5",
+    "ts5to7"
   ],
   "dependencies": {
     "jsonc-parser": "^3.3.1"

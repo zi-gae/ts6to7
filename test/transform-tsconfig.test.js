@@ -207,6 +207,73 @@ test('baseUrl "." folds paths entries as ./-relative', () => {
   assert.deepEqual(co(text).paths['@app/*'], ['./app/*']);
 });
 
+test('ignoreDeprecations is removed (TS5 escape hatch)', () => {
+  const { text, changes } = transformTsconfig(`{
+  "compilerOptions": { "ignoreDeprecations": "5.0", "strict": true }
+}`);
+  assert.equal(co(text).ignoreDeprecations, undefined);
+  assert.ok(changes.some((c) => c.includes('ignoreDeprecations')));
+});
+
+test('prepend is stripped from project references, path is kept', () => {
+  const { text, changes, warnings } = transformTsconfig(`{
+  "compilerOptions": { "strict": true, "types": [] },
+  "references": [
+    { "path": "../core", "prepend": true },
+    { "path": "../utils" }
+  ]
+}`);
+  const refs = parse(text).references;
+  assert.deepEqual(refs, [{ path: '../core' }, { path: '../utils' }]);
+  assert.ok(changes.some((c) => c.includes('prepend')));
+  assert.ok(warnings.some((w) => w.includes('prepend')));
+});
+
+test('solution-style tsconfig (no compilerOptions) still loses prepend', () => {
+  const { text, changes } = transformTsconfig(`{
+  "files": [],
+  "references": [{ "path": "./packages/a", "prepend": true }]
+}`);
+  assert.deepEqual(parse(text).references, [{ path: './packages/a' }]);
+  assert.equal(changes.length, 1);
+});
+
+test('references without prepend are untouched', () => {
+  const input = `{
+  "compilerOptions": { "strict": true, "types": [] },
+  "references": [{ "path": "../core" }]
+}`;
+  const { text, changes } = transformTsconfig(input);
+  assert.equal(text, input);
+  assert.equal(changes.length, 0);
+});
+
+test('typical TS5-era config migrates in one idempotent pass', () => {
+  const once = transformTsconfig(`{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "importsNotUsedAsValues": "error",
+    "ignoreDeprecations": "5.0",
+    "baseUrl": "."
+  },
+  "references": [{ "path": "../lib", "prepend": true }]
+}`);
+  const options = co(once.text);
+  assert.equal(options.target, 'ES2015');
+  assert.equal(options.moduleResolution, 'NodeNext');
+  assert.equal(options.verbatimModuleSyntax, true);
+  assert.equal(options.ignoreDeprecations, undefined);
+  assert.equal(options.baseUrl, undefined);
+  assert.equal(options.strict, false);
+  assert.deepEqual(parse(once.text).references, [{ path: '../lib' }]);
+
+  const twice = transformTsconfig(once.text);
+  assert.equal(twice.text, once.text);
+  assert.equal(twice.changes.length, 0);
+});
+
 test('non-JSON input is returned unchanged', () => {
   const input = 'not json at all';
   const { text, changes, warnings } = transformTsconfig(input);
